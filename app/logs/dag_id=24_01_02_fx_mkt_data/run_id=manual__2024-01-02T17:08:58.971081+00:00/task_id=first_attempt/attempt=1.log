@@ -1,0 +1,31 @@
+[2024-01-02T17:09:04.266+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T17:08:58.971081+00:00 [queued]>
+[2024-01-02T17:09:04.299+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T17:08:58.971081+00:00 [queued]>
+[2024-01-02T17:09:04.300+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 6
+[2024-01-02T17:09:04.352+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): first_attempt> on 2024-01-02 17:08:58.971081+00:00
+[2024-01-02T17:09:04.369+0000] {standard_task_runner.py:57} INFO - Started process 1356 to run task
+[2024-01-02T17:09:04.378+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', '24_01_02_fx_mkt_data', 'first_attempt', 'manual__2024-01-02T17:08:58.971081+00:00', '--job-id', '200', '--raw', '--subdir', 'DAGS_FOLDER/get_fx_mkt_data.py', '--cfg-path', '/tmp/tmpis06_jua']
+[2024-01-02T17:09:04.385+0000] {standard_task_runner.py:85} INFO - Job 200: Subtask first_attempt
+[2024-01-02T17:09:04.619+0000] {task_command.py:416} INFO - Running <TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T17:08:58.971081+00:00 [running]> on host ff92cbb9a252
+[2024-01-02T17:09:05.027+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='24_01_02_fx_mkt_data' AIRFLOW_CTX_TASK_ID='first_attempt' AIRFLOW_CTX_EXECUTION_DATE='2024-01-02T17:08:58.971081+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-02T17:08:58.971081+00:00'
+[2024-01-02T17:09:06.751+0000] {cache.py:130} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/airflow/.cache/py-yfinance' reason: [Errno 13] Permission denied: '/home/airflow/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2024-01-02T17:09:06.753+0000] {cache.py:328} INFO - Failed to create CookieCache, reason: Error creating CookieCache folder: '/home/airflow/.cache/py-yfinance' reason: [Errno 13] Permission denied: '/home/airflow/.cache/py-yfinance'. CookieCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2024-01-02T17:09:25.376+0000] {logging_mixin.py:154} INFO - [*********************100%%**********************]  1 of 1 completed
+[2024-01-02T17:09:25.421+0000] {logging_mixin.py:154} INFO -                 Open      High       Low     Close  Adj Close  Volume
+Date                                                                 
+2010-12-30  1.322104  1.331097  1.322104  1.322454   1.322454       0
+2010-12-31  1.330106  1.342372  1.328992  1.330123   1.330123       0
+2011-01-03  1.335595  1.336505  1.325293  1.335791   1.335791       0
+2011-01-04  1.336005  1.343093  1.331824  1.335684   1.335684       0
+2011-01-05  1.332392  1.332392  1.312905  1.332108   1.332108       0
+...              ...       ...       ...       ...        ...     ...
+2023-12-26  1.102026  1.103997  1.100958  1.102026   1.102026       0
+2023-12-27  1.104301  1.112248  1.102925  1.104301   1.104301       0
+2023-12-28  1.110864  1.113945  1.107101  1.110864   1.110864       0
+2023-12-29  1.106819  1.108647  1.104326  1.106819   1.106819       0
+2024-01-01  1.105583  1.105339  1.103997  1.105583   1.105583       0
+
+[3388 rows x 6 columns]
+[2024-01-02T17:09:25.423+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-02T17:09:25.484+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=24_01_02_fx_mkt_data, task_id=first_attempt, execution_date=20240102T170858, start_date=20240102T170904, end_date=20240102T170925
+[2024-01-02T17:09:25.574+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-02T17:09:25.662+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

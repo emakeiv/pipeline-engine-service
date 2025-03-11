@@ -1,0 +1,16 @@
+[2024-01-02T18:13:47.227+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T18:13:42.000553+00:00 [queued]>
+[2024-01-02T18:13:47.258+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T18:13:42.000553+00:00 [queued]>
+[2024-01-02T18:13:47.259+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 6
+[2024-01-02T18:13:47.311+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): first_attempt> on 2024-01-02 18:13:42.000553+00:00
+[2024-01-02T18:13:47.332+0000] {standard_task_runner.py:57} INFO - Started process 2194 to run task
+[2024-01-02T18:13:47.343+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', '24_01_02_fx_mkt_data', 'first_attempt', 'manual__2024-01-02T18:13:42.000553+00:00', '--job-id', '210', '--raw', '--subdir', 'DAGS_FOLDER/get_fx_mkt_data.py', '--cfg-path', '/tmp/tmpt24felvg']
+[2024-01-02T18:13:47.350+0000] {standard_task_runner.py:85} INFO - Job 210: Subtask first_attempt
+[2024-01-02T18:13:47.595+0000] {task_command.py:416} INFO - Running <TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-02T18:13:42.000553+00:00 [running]> on host ff92cbb9a252
+[2024-01-02T18:13:48.037+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='24_01_02_fx_mkt_data' AIRFLOW_CTX_TASK_ID='first_attempt' AIRFLOW_CTX_EXECUTION_DATE='2024-01-02T18:13:42.000553+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-02T18:13:42.000553+00:00'
+[2024-01-02T18:13:48.041+0000] {oandapyV20.py:207} INFO - setting up API-client for environment practice
+[2024-01-02T18:13:49.468+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
+[2024-01-02T18:13:50.086+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
+[2024-01-02T18:13:50.514+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-02T18:13:50.580+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=24_01_02_fx_mkt_data, task_id=first_attempt, execution_date=20240102T181342, start_date=20240102T181347, end_date=20240102T181350
+[2024-01-02T18:13:50.687+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-02T18:13:50.789+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

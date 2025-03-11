@@ -1,0 +1,32 @@
+[2024-01-03T09:00:25.965+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T09:00:21.284151+00:00 [queued]>
+[2024-01-03T09:00:25.999+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T09:00:21.284151+00:00 [queued]>
+[2024-01-03T09:00:26.000+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 6
+[2024-01-03T09:00:26.054+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): first_attempt> on 2024-01-03 09:00:21.284151+00:00
+[2024-01-03T09:00:26.071+0000] {standard_task_runner.py:57} INFO - Started process 2337 to run task
+[2024-01-03T09:00:26.081+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', '24_01_02_fx_mkt_data', 'first_attempt', 'manual__2024-01-03T09:00:21.284151+00:00', '--job-id', '288', '--raw', '--subdir', 'DAGS_FOLDER/get_fx_mkt_data.py', '--cfg-path', '/tmp/tmp3_66we02']
+[2024-01-03T09:00:26.089+0000] {standard_task_runner.py:85} INFO - Job 288: Subtask first_attempt
+[2024-01-03T09:00:26.333+0000] {task_command.py:416} INFO - Running <TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T09:00:21.284151+00:00 [running]> on host ff92cbb9a252
+[2024-01-03T09:00:27.005+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='24_01_02_fx_mkt_data' AIRFLOW_CTX_TASK_ID='first_attempt' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T09:00:21.284151+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-03T09:00:21.284151+00:00'
+[2024-01-03T09:00:27.009+0000] {oandapyV20.py:207} INFO - setting up API-client for environment practice
+[2024-01-03T09:00:28.236+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46686, symbol: AUD_USD, last date: 2024-01-02 22:00:00
+[2024-01-03T09:00:28.263+0000] {logging_mixin.py:154} INFO - fetching AUD_USD market data from 2024-01-03 22:00:00 to 2024-01-03 09:00:28.263524
+[2024-01-03T09:00:28.264+0000] {logging_mixin.py:154} INFO - AUD_USD market data is loaded into database
+[2024-01-03T09:00:28.265+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46687, symbol: EUR_CAD, last date: None
+[2024-01-03T09:00:28.266+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CAD/candles
+[2024-01-03T09:00:28.852+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CAD/candles
+[2024-01-03T09:00:29.210+0000] {logging_mixin.py:154} INFO - fetching EUR_CAD market data from 2010-12-30 00:00:00 to 2024-01-03 09:00:29.210595
+[2024-01-03T09:00:29.227+0000] {logging_mixin.py:154} INFO - Error processing EUR_CAD: Entity namespace for "security_daily_price" has no property "time"
+[2024-01-03T09:00:29.229+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46688, symbol: USD_CNY, last date: None
+[2024-01-03T09:00:29.230+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CNY/candles
+[2024-01-03T09:00:29.514+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CNY/candles
+[2024-01-03T09:00:30.306+0000] {logging_mixin.py:154} INFO - fetching USD_CNY market data from 2010-12-30 00:00:00 to 2024-01-03 09:00:30.306316
+[2024-01-03T09:00:30.314+0000] {logging_mixin.py:154} INFO - Error processing USD_CNY: Entity namespace for "security_daily_price" has no property "time"
+[2024-01-03T09:00:30.315+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46689, symbol: EUR_CHF, last date: None
+[2024-01-03T09:00:30.316+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CHF/candles
+[2024-01-03T09:00:30.646+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CHF/candles
+[2024-01-03T09:00:30.997+0000] {logging_mixin.py:154} INFO - fetching EUR_CHF market data from 2010-12-30 00:00:00 to 2024-01-03 09:00:30.997075
+[2024-01-03T09:00:31.013+0000] {logging_mixin.py:154} INFO - Error processing EUR_CHF: Entity namespace for "security_daily_price" has no property "time"
+[2024-01-03T09:00:31.023+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-03T09:00:31.090+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=24_01_02_fx_mkt_data, task_id=first_attempt, execution_date=20240103T090021, start_date=20240103T090025, end_date=20240103T090031
+[2024-01-03T09:00:31.227+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-03T09:00:31.314+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

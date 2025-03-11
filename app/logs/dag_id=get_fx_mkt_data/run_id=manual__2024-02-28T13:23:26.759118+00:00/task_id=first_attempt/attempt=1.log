@@ -1,0 +1,31 @@
+[2024-02-28T13:23:39.957+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: get_fx_mkt_data.first_attempt manual__2024-02-28T13:23:26.759118+00:00 [queued]>
+[2024-02-28T13:23:39.996+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: get_fx_mkt_data.first_attempt manual__2024-02-28T13:23:26.759118+00:00 [queued]>
+[2024-02-28T13:23:39.997+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 2
+[2024-02-28T13:23:40.057+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): first_attempt> on 2024-02-28 13:23:26.759118+00:00
+[2024-02-28T13:23:40.078+0000] {standard_task_runner.py:57} INFO - Started process 384 to run task
+[2024-02-28T13:23:40.095+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'get_fx_mkt_data', 'first_attempt', 'manual__2024-02-28T13:23:26.759118+00:00', '--job-id', '297', '--raw', '--subdir', 'DAGS_FOLDER/get_fx_mkt_data.py', '--cfg-path', '/tmp/tmpixelnm34']
+[2024-02-28T13:23:40.107+0000] {standard_task_runner.py:85} INFO - Job 297: Subtask first_attempt
+[2024-02-28T13:23:40.495+0000] {task_command.py:416} INFO - Running <TaskInstance: get_fx_mkt_data.first_attempt manual__2024-02-28T13:23:26.759118+00:00 [running]> on host 297351e5137a
+[2024-02-28T13:23:40.900+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='get_fx_mkt_data' AIRFLOW_CTX_TASK_ID='first_attempt' AIRFLOW_CTX_EXECUTION_DATE='2024-02-28T13:23:26.759118+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-02-28T13:23:26.759118+00:00'
+[2024-02-28T13:23:40.904+0000] {oandapyV20.py:207} INFO - setting up API-client for environment practice
+[2024-02-28T13:23:44.151+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46686, symbol: AUD_USD, last date: 2024-01-02 22:00:00
+[2024-02-28T13:23:44.156+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
+[2024-02-28T13:23:45.007+0000] {logging_mixin.py:154} INFO - fetching AUD_USD market data from 2024-01-03 22:00:00 to 2024-02-28 13:23:45.007244
+[2024-02-28T13:23:45.510+0000] {logging_mixin.py:154} INFO - AUD_USD market data is loaded into database
+[2024-02-28T13:23:45.512+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46687, symbol: EUR_CAD, last date: 2024-01-02 22:00:00
+[2024-02-28T13:23:45.513+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CAD/candles
+[2024-02-28T13:23:45.849+0000] {logging_mixin.py:154} INFO - fetching EUR_CAD market data from 2024-01-03 22:00:00 to 2024-02-28 13:23:45.848909
+[2024-02-28T13:23:46.185+0000] {logging_mixin.py:154} INFO - EUR_CAD market data is loaded into database
+[2024-02-28T13:23:46.190+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46688, symbol: USD_CNY, last date: 2015-07-16 21:00:00
+[2024-02-28T13:23:46.191+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CNY/candles
+[2024-02-28T13:23:46.383+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CNY/candles
+[2024-02-28T13:23:46.604+0000] {logging_mixin.py:154} INFO - fetching USD_CNY market data from 2015-07-17 21:00:00 to 2024-02-28 13:23:46.604266
+[2024-02-28T13:23:46.605+0000] {logging_mixin.py:154} INFO - USD_CNY market data is loaded into database
+[2024-02-28T13:23:46.606+0000] {logging_mixin.py:154} INFO - vendor id: 6, security id: 46689, symbol: EUR_CHF, last date: 2024-01-02 22:00:00
+[2024-02-28T13:23:46.607+0000] {oandapyV20.py:261} INFO - performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_CHF/candles
+[2024-02-28T13:23:46.815+0000] {logging_mixin.py:154} INFO - fetching EUR_CHF market data from 2024-01-03 22:00:00 to 2024-02-28 13:23:46.815059
+[2024-02-28T13:23:47.093+0000] {logging_mixin.py:154} INFO - EUR_CHF market data is loaded into database
+[2024-02-28T13:23:47.100+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-02-28T13:23:47.163+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=get_fx_mkt_data, task_id=first_attempt, execution_date=20240228T132326, start_date=20240228T132339, end_date=20240228T132347
+[2024-02-28T13:23:47.284+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-02-28T13:23:47.373+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

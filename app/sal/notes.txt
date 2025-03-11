@@ -1,0 +1,5 @@
+Factory Pattern: If you have multiple sources of data (not just Oanda), consider implementing 
+a factory pattern to instantiate different data fetching classes based on the data source.
+
+Strategy Pattern: For different ways of processing or transforming data,
+you might use the strategy pattern to switch between different algorithms.

@@ -1,0 +1,18 @@
+[2024-01-03T06:42:49.147+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T06:42:44.233765+00:00 [queued]>
+[2024-01-03T06:42:49.187+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T06:42:44.233765+00:00 [queued]>
+[2024-01-03T06:42:49.188+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 6
+[2024-01-03T06:42:49.246+0000] {taskinstance.py:1382} INFO - Executing <Task(PythonOperator): first_attempt> on 2024-01-03 06:42:44.233765+00:00
+[2024-01-03T06:42:49.264+0000] {standard_task_runner.py:57} INFO - Started process 571 to run task
+[2024-01-03T06:42:49.275+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', '24_01_02_fx_mkt_data', 'first_attempt', 'manual__2024-01-03T06:42:44.233765+00:00', '--job-id', '278', '--raw', '--subdir', 'DAGS_FOLDER/get_fx_mkt_data.py', '--cfg-path', '/tmp/tmpoj0gadoc']
+[2024-01-03T06:42:49.283+0000] {standard_task_runner.py:85} INFO - Job 278: Subtask first_attempt
+[2024-01-03T06:42:49.539+0000] {task_command.py:416} INFO - Running <TaskInstance: 24_01_02_fx_mkt_data.first_attempt manual__2024-01-03T06:42:44.233765+00:00 [running]> on host ff92cbb9a252
+[2024-01-03T06:42:49.976+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='24_01_02_fx_mkt_data' AIRFLOW_CTX_TASK_ID='first_attempt' AIRFLOW_CTX_EXECUTION_DATE='2024-01-03T06:42:44.233765+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-03T06:42:44.233765+00:00'
+[2024-01-03T06:42:49.980+0000] {oandapyV20.py:207} INFO - setting up API-client for environment practice
+[2024-01-03T06:42:51.165+0000] {logging_mixin.py:154} INFO - vendor id: 6
+[2024-01-03T06:42:51.192+0000] {logging_mixin.py:154} INFO - security id: 46686, symbol: AUD_USD, last date: 2024-01-02 22:00:00
+[2024-01-03T06:42:51.217+0000] {logging_mixin.py:154} INFO - fetching AUD_USD market data from 2024-01-03 22:00:00 to 2024-01-03 06:42:51.216903
+[2024-01-03T06:42:51.218+0000] {logging_mixin.py:154} INFO - AUD_USD market data is loaded into database
+[2024-01-03T06:42:51.219+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-01-03T06:42:51.281+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=24_01_02_fx_mkt_data, task_id=first_attempt, execution_date=20240103T064244, start_date=20240103T064249, end_date=20240103T064251
+[2024-01-03T06:42:51.373+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-01-03T06:42:51.462+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
